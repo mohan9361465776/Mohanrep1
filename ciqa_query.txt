@@ -1,0 +1,16 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [jcr_path]
+      ,[jcr_created]
+      ,[last_modified]
+      ,[last_modified_by]
+      ,[cq_last_replicated]
+      ,[cq_last_replication_action]
+      ,[cq_last_published]
+      ,[cq_last_published_by]
+      ,[cq_last_replicated_by]
+      ,[cq_last_replication_status]
+      ,[cq_name]
+      ,[content_creation_date]
+      ,[content_last_published_date]
+      
+     FROM [CIQA_AEMDB_Test].[dbo].[cq_search_report_details] WHERE jcr_path LIKE '%/content/www/us/en/docs/programmable/666790/20-4-20-3-0%';
